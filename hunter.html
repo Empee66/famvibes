@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/hunter.css">
+    <title>password Generator</title>
+</head>
+<body>
+    <div id="title">
+       <P id="name">
+         Random Password Generator 
+        </P>
+        <img src="/images/key.webp" alt="" id="key">
+    </div>
+    <hr>
+     <div class="container">
+    <h1>Generate Your Password</h1>
+    <div class="password-box">
+      <input type="text" id="password" readonly />
+     
+      </button>
+    </div>
+    <p>
+         Enter Password Length:
+  <input type="number" id="lengthInput" min="4" max="8" value="6" />
+    </p>
+    <p>Password Length: <span id="length">0</span></p>
+    <div id="gencopy">
+        <button id="generateBtn"><img src="/images/rotate-1-64.webp" alt="" id="icon"></button>
+     <button id="copyBtn" title="Copy to clipboard">
+📋
+        </button>
+    </div>
+  
+  </div>
+  <script src="/html/hunter.js"></script>
+</body>
+</html>

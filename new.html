@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
+    <title>WordPuzzleGame</title>
+</head>
+
+<body>
+        
+             <div id="game-title">
+      <p id="game-name">WORD PUZZLE </p>
+        <img src="/images/puzzle.webp" alt="" id="hangman">
+         <ul>
+      
+       
+            <li><a href="#"> Play</a></li>
+            <li><a href="#">User</a>
+               <ul class="dropdown">
+                <li><a href="#">Guest</a></li>
+                <hr>
+               
+                <li><a href="#">Gerald</a></li>
+
+               </ul> 
+            </li>
+                
+            
+         </ul>
+            
+            </div>
+        
+        
+       
+    </div>
+    <div id="difficulty">
+        
+    <p>
+      Difficulty  <img src="/images/thinking.webp" alt="" id="thinkicon">:
+    </p>
+    <p id="ans">
+        If You Know You Know!
+    </p>
+   
+    </div>
+    <div class="container">
+        <h1>Word Puzzle Game</h1>
+        <div id="wordDisplay" class="word-display"></div>
+        <input type="text" id="letterInput" maxlength="1" placeholder="Take a Guess" />
+        <button id="guessButton">Try</button>
+        <div id="message" class="message"></div>
+        <button id="restartButton" class="restart-button">Restart </button>
+    </div>
+    <script src="index.js"></script>
+    
+</body>
+</html>
