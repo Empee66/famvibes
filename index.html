@@ -1,55 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles4.css">
-    <title>Gabrielle Perfume</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Important To-Do List</title>
+
+  <link rel="stylesheet" href="index.css">
 </head>
-
 <body>
-    <div class="product-card">
-        <div id="item1">
-            <img src="/images/perfume.jpg" alt=" perfume" id="image">
-        </div>
+  <div class="container">
+    
+      
+<h1 class="animate__animated  animate__bounce"> ❤ My To-Do-List</h1>
+    
+    
 
-
-        <div id="writing">
-            <p id="t1"> PERFUME</p>
-            <h2 id="title"> Gabrielle Essence Eau De Parfum
-            </h2>
-
-
-            <p id="des">
-                A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House
-                of
-                CHANEL.
-            </p>
-            <div id="price">
-                <p id="discount">
-                    $149.99
-                </p>
-                <p id="original"> <s>$169.99</s> </p>
-            </div>
-            <button id="cart">
-                <img src="/images/cart.png" alt="" id="c">
-                <a href="football.html">Add to Cart</a>
-            </button>
-        </div>
+    <div class="stats">
+      <span>Total: <strong id="total-count">0</strong></span>
+      <span>Completed: <strong id="completed-count">0</strong></span>
+      <span>Deleted: <strong id="deleted-count">0</strong></span>
+     
     </div>
 
+    <div class="input-section">
+      <input type="text" id="task-input" placeholder="Enter a task">
+        <div id="draggableText" draggable="true">Drag</div>
+      <button id="add-btn">Add Task</button>
+    </div>
+ 
+    <ul id="task-list" class="task-list"></ul>
 
 
-    </p>
+  
 
+    <h2>Important Tasks</h2>
+    <div class="important-tasks">
+      <div class="important-box drop-zone" id="important-1"> drop here</div>
+      <div class="important-box drop-zone" id="important-2"></div>
+      <div class="important-box drop-zone" id="important-3"></div>
+      <div class="important-box drop-zone" id="important-4"></div>
+      <div class="important-box drop-zone" id="important-5"></div>
+    </div>
+  </div>
 
-    <script>
-        const addToCartButton = document.querySelector('.add-to-cart');
-        addToCartButton.addEventListener('click', () => {
-            alert('Item added to cart!');
-        });
-    </script>
+  
+ <script>
+    const input = document.getElementById("task-input");
+    const draggable = document.getElementById("draggableText");
+
+    // Update draggable div whenever input changes
+    input.addEventListener("input", () => {
+      draggable.textContent = input.value || "Drag me";
+    });
+
+    // When user starts dragging the div, pass the input value
+    draggable.addEventListener("dragstart", (e) => {
+      e.dataTransfer.setData("text", draggable.textContent);
+    });
+
+    // Allow drop
+    document.querySelectorAll(".drop-zone").forEach(zone => {
+      zone.addEventListener("dragover", e => {
+        e.preventDefault();
+        zone.classList.add("dragover");
+      });
+
+      zone.addEventListener("dragleave", () => {
+        zone.classList.remove("dragover");
+      });
+
+      zone.addEventListener("drop", e => {
+        e.preventDefault();
+        const data = e.dataTransfer.getData("text");
+        zone.textContent = data;
+        zone.classList.remove("dragover");
+      });
+    });
+  </script>
+
+  <script src="index.js"></script>
+
 </body>
-
 </html>

@@ -1,0 +1,170 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  background: #e9e3e3;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+  
+}
+
+
+
+h1{
+  text-align: center;
+  color: #000000;
+  font-family: love ya like a sister;
+  font-size: 2.5rem;
+  background: url("bck.png") center;
+  background-size: cover;
+  background-clip: text;
+  color: transparent;
+  animation: animate 15s linear infinite;
+  }
+  @keyframes animate {
+    to{
+      background-position-x: -500px ;
+    }
+  }
+h2{
+    text-align: center;
+  color: #000000;
+  font-family: rock salt;
+}
+
+.input-section {
+  display: flex;
+  margin: 20px 0;
+  gap: 10px;
+}
+
+#task-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family:poppins ;
+}
+
+#add-btn {
+  background-color: #070350;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family:poppins ;
+  box-shadow: inset 0 -100px 0 0 #1b0b4e;
+}
+button:active{
+  transform: scale(0.9);
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #000000;
+}
+
+
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 6px;
+  background: #f55207;
+  border-radius: 6px;
+  font-family:poppins ;
+  font-size: 20px;
+}
+
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  color: #000000;
+  font-family:poppins ;
+  font-size: 20px;
+}
+
+.task-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 8px;
+}
+
+.important-tasks {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+  justify-content: space-between;
+}
+
+.important-box {
+  flex: 1;
+  min-height: 50px;
+  background: #eecf96;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  font-family:poppins ;
+}
+
+ #draggableText {
+      display: inline-block;
+      padding: 10px;
+      background-color: #eee;
+      border: 1px solid #ccc;
+      height: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      cursor: grab;
+
+    }
+
+ 
+    .drop-zone {
+      width: 250px;
+      height: 100px;
+      border: 2px dashed #aaa;
+      margin-bottom: 15px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    .drop-zone.dragover {
+      background-color: #dff6ff;
+      border-color: #00aaff;
+    }
+
+    input {
+      font-size: 16px;
+      padding: 8px;
+      width: 250px;
+      margin-bottom: 10px;
+    }
